@@ -1,0 +1,79 @@
+/**
+ * App
+ */
+
+@import "base/base";
+
+.app-web {
+    height: 100%;
+
+    .agreement {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .body {
+            flex: 1;
+            overflow: auto;
+            padding: 30px;
+            border: 1px solid #DDD;
+
+            .title {
+                line-height: 34px;
+                font-size: 18px;
+                text-align: center;
+
+                h1 {
+                    font-size: 28px;
+                }
+            }
+
+            .content {
+                line-height: 1.6;
+                font-size: 14px;
+
+                p {
+                    margin-top: 10px;
+                }
+
+                img {
+                    width: 100px;
+                    vertical-align: bottom;
+                }
+
+                .time {
+                    img {
+                        width: auto !important;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            text-align: center;
+
+            .agree {
+                display: inline-block;
+                margin: 15px auto;
+
+                .checkbox:after {
+                    display: none;
+                    content: "";
+                    width: 6px;
+                    height: 12px;
+                    border: 1px solid #BF140A;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+
+            .btn-wrapper {
+                button {
+                    width: 200px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

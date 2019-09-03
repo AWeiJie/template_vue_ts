@@ -1,0 +1,124 @@
+// stylelint-disable
+@import "~normalize.css";
+
+/* prettier-ignore */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+lengend,
+button,
+input,
+textarea,
+th,
+td,
+div,
+span {
+    // 清除内外边距和设置盒模型
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* prettier-ignore */
+
+fieldset,
+lengend,
+button,
+input,
+textarea,
+a {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* prettier-ignore */
+
+body,
+button,
+input,
+select,
+textarea {
+    // 这里默认字体需要定义在 _variable.scss
+    // font-family: $font-family;
+}
+
+a {
+    color: inherit;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+body,
+html {
+    height: 100%;
+    padding: 0 20px 20px 20px;
+    font-family: "PingFangSC", "Hiragino Sans GB", "Microsoft YaHei";
+    background-color: #FFF;
+    touch-action: manipulation;
+}
+
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+html {
+    color: #333;
+    font-size: 62.5%;
+
+    /*10 ÷ 16 × 100% = 62.5%*/
+}
+
+body {
+    overflow: hidden;
+    font-size: 1.4rem;
+
+    /*1.4 × 10px = 14px */
+}
+
+.body::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 5px;
+
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.body::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 60px;
+    background: transparent;
+}
+
+.body:hover::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+
+    -webkit-box-shadow: inset 0 0 5px rgba(140, 171, 209, 0.5);
+    background: #8CABD1;
+}
+
+.body::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: transparent;
+}

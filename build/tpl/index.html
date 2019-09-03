@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="description" content="经传多赢，评测系统">
+    <title>经传多赢评测系统</title>
+    <link rel="shortcut icon" href="https://static.jingzhuan.cn/Images/favicon.ico">
+    <script>
+        (function () {
+            window.onerror = function (msg, url, line) {
+                var errImg = document.createElement('img');
+                var errMsg = msg + '\n' + url + '   ' + line + '\n' + window.navigator.userAgent;
+                errImg.src = 'https://gw.n8n8.cn/logs/app/graylog/post?the_url=' + encodeURIComponent(location.href) + '&browser_info=' + encodeURIComponent(window.navigator.userAgent) + '&error_detail=' + encodeURIComponent(msg) + '&error_file=' + url.split('?')[0] + '&error_line=' + line + '&v=' + Math.random();
+                errImg = null;
+            }
+
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+            var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+            var browser = {
+                versions: function () {
+                    var u = navigator.userAgent;
+                    return {
+                        trident: u.indexOf('Trident') > -1, //IE内核
+                    };
+                }()
+            }
+            if (browser.versions.trident && !isIE11) {
+                alert('您正在使用的浏览器版本太低（IE10或IE10以下，包括使用了IE内核的360浏览器、搜狗浏览器等）, 如果不能正常浏览本站或某些功能无法使用,请到微软官网下载升级或使用谷歌浏览器')
+            }
+        })();
+    </script>
+    <!--[if lte IE 10]><div style="position: relative; z-index:1; padding: 10px 0; clear: both; line-height: 1.5; text-align:center; color: #fff; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); background: #212121;"><p>您正在使用的浏览器版本太低（IE10或IE10以下，包括使用了IE内核的360浏览器、搜狗浏览器等）</p><p>如果不能正常浏览本站或某些功能无法使用，请到微软官网下载升级 <a style="color:red;" href="http://windows.microsoft.com/zh-CN/internet-explorer/downloads/ie" target="_blank">Internet Explorer</a> <span style="white-space:nowrap;">或使用谷歌 <a style="color:red;" href="http://rj.baidu.com/soft/detail/14744.html" target="_blank">Google Chrome</a> （强烈推荐）浏览器</span></p></div><![endif]-->
+</head>
+
+<body>
+    <div id="app"></div>
+    <script
+        src="<%= htmlWebpackPlugin.options.staticHost %><%= htmlWebpackPlugin.options.assetsPublicPath %><%= htmlWebpackPlugin.options.dllName['vendor.dll'] %>"></script>
+    <script
+        src="<%= htmlWebpackPlugin.options.staticHost %><%= htmlWebpackPlugin.options.assetsPublicPath %><%= htmlWebpackPlugin.options.dllName['vue.dll'] %>"></script>
+    <!-- <script>
+        // css rem
+         (function(b,c){var d=b.documentElement,isIos=navigator.userAgent.match(/iphone|ipod|ipad/gi),dpr=Math.min(c.devicePixelRatio,3),scale=1/dpr,resizeEvent='orientationchange'in window?'orientationchange':'resize';d.dataset.dpr=dpr;var e=b.createElement('meta');e.name='viewport';
+         if(!navigator.userAgent.match(/Redmi|QQBrowser|android/gi)){e.content='initial-scale='+scale+',maximum-scale='+scale+',user-scalable=no'};
+         d.firstElementChild.appendChild(e);var f=function(){var a=d.clientWidth;if(a/dpr>640){a=640*dpr}d.style.fontSize=20*(a/750)+'px'};f();if(!b.addEventListener)return;c.addEventListener(resizeEvent,f,false)})(document,window);
+      </script> -->
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
