@@ -78,7 +78,7 @@
         "lint-staged": "^6.1.0",
         "markdown-it": "^8.4.0",
         "markdown-it-container": "^2.0.0",
-        "node-notifier": "^5.2.1",
+        "node-notifier": "^8.0.1",
         "node-sass": "^4.5.3",
         "opn": "^5.1.0",
         "optimize-css-assets-webpack-plugin": "^2.0.0",
